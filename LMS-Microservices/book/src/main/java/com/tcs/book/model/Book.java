@@ -20,7 +20,7 @@ public class Book {
     @Enumerated(EnumType.STRING)
     private BookStatus status;
 
-    enum BookStatus {
+    public enum BookStatus {
         AVAILABLE,
         BORROWED
     }
