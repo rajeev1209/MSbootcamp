@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+         - id: customer_route
+           uri: http://localhost:8081 # Target service URL
+           predicates:
+             - Path=/customers/** # Incoming URL pattern
+         - id: order_route
+           uri: http://localhost:8082 # Target service URL
+           predicates:
+           - Path=/orders/** # Incoming URL pattern
+
